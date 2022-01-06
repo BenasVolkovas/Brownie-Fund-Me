@@ -1,7 +1,7 @@
 from brownie import FundMe, network, config
 from scripts.helpful_scripts import get_price_feed_address, get_account
 
-
+# Deploy new Fund Me smart contract
 def deploy_fund_me():
     account = get_account()
     priceFeedAddress = get_price_feed_address()

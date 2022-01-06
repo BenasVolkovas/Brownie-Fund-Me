@@ -8,12 +8,19 @@ compiler:
 dotenv: .env
 networks:
   default: development
+  # Real Testnet
   rinkeby:
     eth_usd_price_feed: "0x8A753747A1Fa494EC906cE90E9f37563A8AF630e"
     verify: True
+  # For testing mainnet while running locally
+  mainnet-fork:
+    eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    verify: False
+  # Default blockchain
   development:
     verify: False
+  # Same as development ganache blockchain, but saves contracts in build folder
   ganache-local:
     verify: False
 wallets:
-    from_key: ${PRIVATE_KEY}
+    from_key: ${METAMASK_PRIVATE_KEY}
