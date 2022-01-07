@@ -9,7 +9,9 @@ def test_can_fund_and_withdraw():
     # Arrange
     account = get_account()
     fundMe = deploy_fund_me()
-    entranceFee = fundMe.getEntranceFee()
+    entranceFee = (
+        fundMe.getEntranceFee() + 100
+    )  # +100 is a small amount if blockchain for some reason needs just a little bit more
 
     # Act 1
     tx = fundMe.fund({"from": account, "value": entranceFee})

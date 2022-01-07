@@ -4,7 +4,7 @@ from web3 import Web3
 DECIMALS = 8
 STARTING_PRICE = 2000 * 10 ** 8
 
-FORKED_LOCAL_ENVIRONMENTS = ["minnet-fork"]
+FORKED_LOCAL_ENVIRONMENTS = ["mainnet-fork", "mainnet-fork-dev"]
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "ganache-local"]
 
 # Get account depending on active network chain
